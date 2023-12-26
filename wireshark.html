@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireshark</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+
+        <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo">HOME</a>
+            </header>
+
+        <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="scanact.html">Scanning Activities</a></li>
+                    <li><a href="vulscan.html">Vulnerability scanning</a></li>
+                    <li><a href="whois.html">Whois</a></li>
+                    <li><a href="wireshark.html">Wireshark</a></li>
+                    <li><a href="honeypot.html">Honeypot</a></li>
+                    <li><a href="bufferovf.html">Buffer Overflow</a></li>
+                    <li><a href="injections.html">Injections</a></li>
+                    <li><a href="burpsuite.html">Burp Suite hijacking</a></li>
+                    <li><a href="maninmid.html">Man in the Middle </a></li>
+                    <li><a href="digital.html">Digitalization</a></li>
+                    <li><a href="solar.html">Solar Wind</a></li>
+                    
+                </ul>
+            </nav>
+            <!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Wireshark</h1>
+								</header>
+								<p>An application that records packets from a network connection, such one between your computer and the internet or your home office, is called a network protocol analyzer,
+                                     or Wireshark. In a standard Ethernet network, a discrete unit of data is called a packet. The most popular packet sniffer in the world is called Wireshark.
+                                     <h4>Packet capture:</h4>Wireshark captures whole traffic streams, perhaps tens of thousands of packets at a time, by listening to a network connection in real time.<br><br>
+                                     <h4>Filtering:</h4>With the use of filters, Wireshark can chop and dice all of this haphazard live data. You can get only the information you require by using a filter.<br><br>
+                                     <h4>Visualisation:</h4>Like other decent packet sniffers, Wireshark lets you go straight into the centre of a network packet. You may even see complete network streams and chats using it.<br><br>
+                                     I used wireshark to simulate a DoS attack using Kali Linux on a random IP address:
+                                    <div class="image main"><img src="images/hping.png" alt="" /></div>
+                                    hping3: This is the command to run the hping3 utility.
+                                    -S: This flag indicates that the packets should have the SYN flag set, which is often used for establishing a connection.<br>
+                                    -p 80: This flag specifies the destination port number. In this case, it's port 80, which is the default port for HTTP.<br>
+                                    -c 30: This flag sets the count of packets to send to 30.<br>
+                                    --flood: This flag sends packets as fast as possible without pausing, essentially flooding the target. It tries to send packets as quickly as the system allows, which can potentially create a denial of service (DoS) attack.<br>
+
+
+                                    I also used the hping3 --scan command to scan address ports:<br><br>
+                                    <div class="image main"><img src="images/ports.png" alt="" /></div><br>
+
+                                    Furthermore, here is a demonstration when pinging the address:
+                                    <div class="image main"><img src="images/ping.png" alt="" /></div><br>
+                                    You can see that carrying out DOS flood assaults is not that difficult. 
+                                    These attacks' simplicity serves as a stark illustration of the risk that internet users,
+                                     particularly corporate users, face (attacks of this nature are uncommon against domestic users). 
+                                     DDOS assaults can occasionally be deadly for businesses and very challenging to stop.
+
+                                    </p>
+							</section>
+
+					</div>
+
+				
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy;2023 Ali Mohamed</li></ul>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+    
+    </body>
+</html>
